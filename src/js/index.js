@@ -1,13 +1,20 @@
-//import react into the bundle
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import SecondsCounter from './component/secondsCounter';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
 
-//import your own components
-import Home from "./component/home.jsx";
+let seconds = 0;
 
-//render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const renderCounter = () => {
+  root.render(<SecondsCounter seconds={seconds} />);
+};
+
+renderCounter();
+
+setInterval(() => {
+  seconds += 1;
+  renderCounter();
+}, 1000);
