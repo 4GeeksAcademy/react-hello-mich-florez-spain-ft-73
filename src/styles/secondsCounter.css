@@ -1,0 +1,27 @@
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.counter {
+  display: flex;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.digit {
+  color: white;
+  font-size: 3rem;
+  margin: 0 5px;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.digit i {
+  font-size: 3rem;
+}
